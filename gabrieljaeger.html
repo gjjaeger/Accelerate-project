@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gabriel Jaeger</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery-3.1.1.min.js"></script>
+  <!--<script src="gabrieljaeger.js"></script>-->
+  <script src="bootstrap.min.js"></script>
+  <style>
+		.nav-bar li{
+			display: inline-block;
+    }
+
+    .navigationbar {
+      position: fixed;
+      top:0px;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .navbar-nav li{
+      
+		}
+    .title {
+      max-width: 300px;
+      margin:auto;
+      text-align: center;
+      border-bottom: 0.5px solid grey;
+      padding-bottom: 10px;
+      margin-top: 100px;
+    }
+
+    .intro{
+      display:block;
+      margin:auto;
+      padding-bottom: 50px;
+      border-bottom: 1px solid grey;
+    }
+    .starter {
+      display: inline-block;
+      margin-left: 10%;
+      padding:20px;
+
+      
+    }
+    .gjphoto{
+      display:inline-block;
+      border: 1px solid grey;
+      margin:0px 20px;
+      border-radius: 100%;
+    }
+
+    #btn{
+      display: block;
+      margin:40px auto;
+    }
+
+    #listtitle{
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .listitems{
+      display: none;
+    }
+
+    .askbox{
+      margin: 80px auto;
+      width: 50%;
+    }
+
+    .photoalbum {
+      margin-left: 75px;
+    }
+
+    .photoalbum img{
+      border:3px solid black;
+      padding:10px;
+      display: inline-block;
+    }
+
+    #photoalbtitle{
+      margin-bottom:20px;
+    }
+
+    .row {
+      padding-top: 20px;
+    }
+
+    *{
+      border:0px solid black;
+    }
+	</style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<div class="navigationbar">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Brand</a>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#section1">About Me</a></li>
+            <li><a href="#section2">Photo Album</a></li>
+            <li><a href="#section3">Read me</a></li>
+          </ul>
+      </div><!-- /.container-fluid -->
+    </nav>
+  </div>
+	<div class="container">
+  	<div id="section1">
+      	<h1 class="title">About me</h1>
+    	<div class="intro">
+         <img class="gjphoto" src="gabriel.jpg"/>
+      		<p class="starter">Hey there! I am Gabriel and thanks for checking out this site. <br> To get to know me a little more, feel free to click on the button below</p>
+      </div><!-- /.intro-->
+    		<button class="btn" id="btn">Find out what I like</button>
+    	<div class="likelist">	
+    		<p id="listtitle">I like to... </p>
+    		<div class="listitems">
+    			<p>laugh</p>
+    			<p>learn new languages</p>
+    			<p>make new friends</p>
+    		</div><!-- /.listitem-->
+    	 </div><!-- /.likelist-->
+
+    	<div class="askbox">
+    		<div class="form-group">
+          <label for="comment">You have a question for me? Ask me here:</label>
+          <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+    	</div><!-- /.askbox-->
+    </div><!-- /.section1-->
+    <div class="section2">
+      <h1 class="title" id="photoalbtitle">My Photoalbum</h1>
+      <div class="photoalbum">
+        <div class="row">
+          <img class="col-md-3" src="gabriel.jpg"/>
+          <img class="col-md-3 col-md-offset-1" src="gabriel.jpg"/>
+          <img class="col-md-3 col-md-offset-1" src="gabriel.jpg"/>
+        </div>
+        <div class="row">
+          <img class="col-md-3" src="gabriel.jpg"/>
+          <img class="col-md-3 col-md-offset-1" src="gabriel.jpg"/>
+          <img class="col-md-3 col-md-offset-1" src="gabriel.jpg"/>
+        </div>
+        <div class="row">
+          <img class="col-md-3" src="gabriel.jpg"/>
+          <img class="col-md-3 col-md-offset-1" src="gabriel.jpg"/>
+          <img class="col-md-3 col-md-offset-1" src="gabriel.jpg"/>
+        </div>
+      </div><!-- /.photoalbum-->
+    </div><!-- /.section2-->
+  </div> <!-- /.container-->
+<script>
+  $(document).ready(function(){
+    console.log( "ready!" );
+    $("#btn").on("click",function(){
+      
+      alert("jfhelkf");
+    });
+  });
+</script>
+</body>
+</html>
