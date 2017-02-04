@@ -92,34 +92,34 @@
 	</style>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body data-spy="scroll" data-target="#navibar" data-offset="0">
 	<div class="navigationbar">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" id="navibar">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Brand</a>
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#section1">About Me</a></li>
-            <li><a href="#section2">Photo Album</a></li>
-            <li><a href="#section3">Read me</a></li>
+            <li class="active"><a href="#aboutme">About Me</a></li>
+            <li><a href="#photoalb">Photo Album</a></li>
+            <li><a href="#readme">Read me</a></li>
           </ul>
       </div><!-- /.container-fluid -->
     </nav>
   </div>
 	<div class="container">
-  	<div id="section1">
+  	<div id="aboutme">
       	<h1 class="title">About me</h1>
     	<div class="intro">
          <img class="gjphoto" src="gabriel.jpg"/>
       		<p class="starter">Hey there! I am Gabriel and thanks for checking out this site. <br> To get to know me a little more, feel free to click on the button below</p>
       </div><!-- /.intro-->
-    		<button class="btn" id="btn">Find out what I like</button>
     	<div class="likelist">	
     		<p id="listtitle">I like to... </p>
     		<div class="listitems">
-    			<p>laugh</p>
-    			<p>learn new languages</p>
-    			<p>make new friends</p>
+    			<p id="li1">laugh</p>
+    			<p id="li2">learn new languages</p>
+    			<p id="li3">make new friends</p>
     		</div><!-- /.listitem-->
+        <button class="btn" id="btn">Find out what I like</button>
     	 </div><!-- /.likelist-->
 
     	<div class="askbox">
@@ -129,7 +129,7 @@
         </div>
     	</div><!-- /.askbox-->
     </div><!-- /.section1-->
-    <div class="section2">
+    <div id="photoalb">
       <h1 class="title" id="photoalbtitle">My Photoalbum</h1>
       <div class="photoalbum">
         <div class="row">
@@ -149,13 +149,18 @@
         </div>
       </div><!-- /.photoalbum-->
     </div><!-- /.section2-->
+    <div id="readme">
+      <p>readme comes here</p>
+    </div>
   </div> <!-- /.container-->
 <script>
   $(document).ready(function(){
-    console.log( "ready!" );
     $("#btn").on("click",function(){
-      
-      alert("jfhelkf");
+      for(var i=1, i<4, i++){
+        $('#li'+i).show();
+      }
+      $(this).text("more");
+     
     });
   });
 </script>
