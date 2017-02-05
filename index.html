@@ -15,8 +15,55 @@
       position: fixed;
       top:0px;
       width: 100%;
-      z-index: 1;
+      z-index: 10;
       
+    }
+    .my-container {
+      position: relative;
+      overflow: hidden;
+      height:600px;
+    }
+    .my-container h1 {
+      padding-top: 200px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      font-size: 72px;
+      color: black;
+    } 
+
+    .my-container h2{
+      text-align: center;
+      color: black;
+      z-index: 3;
+      position: relative;
+      padding-top: 40px;
+    }
+
+    .my-container img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+      opacity: 0.5;
+      z-index: 0;
+    }
+
+    #btn1{
+      position: relative;
+      display: block;
+      margin: 70px auto; 
+      width:12%;
+      padding:5px;
+      font-size: 24px;
+      font-weight: bold;
+      border: 3px solid #EC8374;
+      background: rgba(245, 54, 28,0.7); /* For browsers that do not support gradients */
+      outline:none;
+      border-radius: 10px;
+      z-index: 4;
+      color: black;
     }
 
     .title {
@@ -25,31 +72,44 @@
       text-align: center;
       border-bottom: 0.5px solid #DFD6D4;
       padding-bottom: 10px;
-      margin-top: 100px;
+      margin-top: 40px;
     }
 
     .intro{
       display:block;
       margin:auto;
-      padding-bottom: 50px;
-      border-bottom: 1px solid rgba(245, 49, 14, 0.2);
+      padding-bottom: 10px;
+      border-bottom: 0px solid rgba(245, 49, 14, 0.2);
+      width: 70%;
     }
+
     .starter {
-      display: inline-block;
-      margin-left: 10px;
-      padding:0px;
-      font-size: 24px;
+      display: block;
+      position: relative;
+      margin-left: 220px;
+      margin-top:-160px;
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    .hr{
+      border-top: 1px solid rgba(245, 49, 14, 0.2);
+      height: 0px;
+      width: 75%;
+      float: right;
     }
 
     #aboutme{
       border-bottom: 1px solid rgba(245, 49, 14, 0.2);
 
+
     }
     .gjphoto{
       display:inline-block;
       border: 1px solid rgba(245, 49, 14, 0.2);
-      margin:0px 20px;
+      margin:60px 20px;
       border-radius: 100%;
+      width: 20%;
     }
 
     #btnn{
@@ -87,6 +147,7 @@
       text-transform: uppercase;
       font-family: helvetica;      
       background: white;
+      float: right;
     
     }
 
@@ -168,6 +229,7 @@
       background: -moz-linear-gradient(rgba(241,49,15,0),rgba(228,222,221,0.7)); /*Fx 3.6-15*/
       background: linear-gradient(rgba(241,49,15,0), rgba(228,222,221,0.7)); /*Standard*/
       background-size:100%;
+      
     }
 
 	</style>
@@ -176,23 +238,32 @@
 <body data-spy="scroll" data-target="#navibar" data-offset="0">
 	<div class="navigationbar">
     <nav class="navbar navbar-default" id="navibar">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Home</a>
+      <div class="container-fluid">    
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#aboutme">About Me</a></li>
+            <li class="active"><a class="navbar-brand" href="#">Home</a>
+            <li><a href="#aboutme">About Me</a></li>
             <li><a href="#photoalb">Photo Album</a></li>
             <li><a href="#readme">Read me</a></li>
           </ul>
       </div><!-- /.container-fluid -->
     </nav>
   </div>
-	<div class="container">
+	<div class="my-container">
+    <h1>Welcome to my site</h1>
+    <h2>I appreciate you stopping by. Feel free to take a look around</h2>
+    <a href="#aboutme" class="btn" id="btn1">Let's go</a>
+    <img src="backgrnd.jpg">
+  </div>
+  <div class="container">
   	<div id="aboutme">
       	<h1 class="title">About me</h1>
     	<div class="intro">
          <img class="gjphoto" src="gabriel.jpg"/>
       		<p class="starter">Hey there! I am Gabriel and thanks for checking out this site. <br> To get to know me a little more, feel free to click on the button below</p>
       </div><!-- /.intro-->
+      <div class="hr">
+        <p></p>
+      </div>
     	<div class="likelist">	
     		<p id="listtitle">I like to... </p>
     		<div class="listitems">
