@@ -6,8 +6,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-		.nav-bar li{
-			display: inline-block;
+		#navibar{
+			border-bottom: 1px solid rgba(245, 49, 14, 0.2);
+      padding: 0px;
     }
 
     .navigationbar {
@@ -15,16 +16,14 @@
       top:0px;
       width: 100%;
       z-index: 1;
+      
     }
 
-    .navbar-nav li{
-      
-		}
     .title {
       max-width: 300px;
       margin:auto;
       text-align: center;
-      border-bottom: 0.5px solid grey;
+      border-bottom: 0.5px solid #DFD6D4;
       padding-bottom: 10px;
       margin-top: 100px;
     }
@@ -33,25 +32,39 @@
       display:block;
       margin:auto;
       padding-bottom: 50px;
-      border-bottom: 1px solid grey;
+      border-bottom: 1px solid rgba(245, 49, 14, 0.2);
     }
     .starter {
       display: inline-block;
-      margin-left: 10%;
-      padding:20px;
+      margin-left: 10px;
+      padding:0px;
+      font-size: 24px;
+    }
 
-      
+    #aboutme{
+      border-bottom: 1px solid rgba(245, 49, 14, 0.2);
+
     }
     .gjphoto{
       display:inline-block;
-      border: 1px solid grey;
+      border: 1px solid rgba(245, 49, 14, 0.2);
       margin:0px 20px;
       border-radius: 100%;
     }
 
-    #btn{
+    #btnn{
       display: block;
       margin: 40px auto; 
+      width:15%;
+      padding:10px;
+      font-size: 16px;
+      border: 1px solid #DFD6D4;
+      background: white; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(rgba(241,49,15,0),rgba(228,222,221,0.7)); /*Safari 5.1-6*/
+      background: -o-linear-gradient(rgba(241,49,15,0),rgba(228,222,221,0.7)); /*Opera 11.1-12*/
+      background: -moz-linear-gradient(rgba(241,49,15,0),rgba(228,222,221,0.7)); /*Fx 3.6-15*/
+      background: linear-gradient(rgba(241,49,15,0), rgba(228,222,221,0.7)); /*Standard*/
+      outline:none;
            
     }
 
@@ -67,34 +80,32 @@
       padding-top: 10px;
       padding-bottom: 10px;
       text-align: center;
-      border: 0.5px solid grey;
+      border: 0.5px solid #DFD6D4;
       border-radius: 8px;
       width: 35%;
-      margin-left: auto;
-      margin-right: auto;
       font-size: 24px;
       text-transform: uppercase;
-      font-family: helvetica;
+      font-family: helvetica;      
+      background: white;
+    
     }
 
     #li1 {
-      background: red; /* For browsers that do not support gradients */
-      background: -webkit-linear-gradient(-90deg, red, yellow); /* For Safari 5.1 to 6.0 */
-      background: -o-linear-gradient(-90deg, red, yellow); /* For Opera 11.1 to 12.0 */
-      background: -moz-linear-gradient(-90deg, red, yellow); /* For Firefox 3.6 to 15 */
-      background: linear-gradient(-90deg, red, yellow); /* Standard syntax */    
+      margin-left: 30%;  
     }
 
     #li2{
-      background: blue; /* For browsers that do not support gradients */
-      background: -webkit-linear-gradient(-90deg, purple, blue); /* For Safari 5.1 to 6.0 */
-      background: -o-linear-gradient(-90deg, purple, blue); /* For Opera 11.1 to 12.0 */
-      background: -moz-linear-gradient(-90deg, purple, blue); /* For Firefox 3.6 to 15 */
-      background: linear-gradient(-90deg, purple, blue); /* Standard syntax */    
-      color: white;
+      
+      margin-left:35%;
+    }
+
+    #li3{
+      margin-left: 30%;
     }
     #limg1, #limg2, #limg3{
       display: none;
+      border: 1px solid #DFD6D4;
+      border-radius: 4px;
     }
 
     #limg1{
@@ -128,22 +139,37 @@
     }
 
     .photoalbum img{
-      border:3px solid black;
-      padding:10px;
+      border:1px solid rgba(245, 49, 14, 0.2);
+      padding:0px;
       display: inline-block;
+      border-radius: 3px;
     }
 
     #photoalbtitle{
       margin-bottom:20px;
+      margin-top: 40px;
     }
 
     .row {
       padding-top: 20px;
     }
 
+    .activeli{
+      border: 1px solid #84DAED;
+    }
+
     *{
       border:0px solid black;
     }
+    body {
+      background: white; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(rgba(241,49,15,0),rgba(228,222,221,0.7)); /*Safari 5.1-6*/
+      background: -o-linear-gradient(rgba(241,49,15,0),rgba(228,222,221,0.7)); /*Opera 11.1-12*/
+      background: -moz-linear-gradient(rgba(241,49,15,0),rgba(228,222,221,0.7)); /*Fx 3.6-15*/
+      background: linear-gradient(rgba(241,49,15,0), rgba(228,222,221,0.7)); /*Standard*/
+      background-size:100%;
+    }
+
 	</style>
 </head>
 
@@ -151,7 +177,7 @@
 	<div class="navigationbar">
     <nav class="navbar navbar-default" id="navibar">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Brand</a>
+        <a class="navbar-brand" href="#">Home</a>
           <ul class="nav navbar-nav">
             <li class="active"><a href="#aboutme">About Me</a></li>
             <li><a href="#photoalb">Photo Album</a></li>
@@ -177,7 +203,7 @@
         <img id="limg1" class="litemphoto" src="gabriel.jpg"/>
         <img id="limg2" class="litemphoto" src="gabriel.jpg"/>
         <img id="limg3" class="litemphoto" src="gabriel.jpg"/>
-        <button class="btn" id="btn">Find out what I like</button>
+        <button class="btn" id="btnn">Find out what I like</button>
     	 </div><!-- /.likelist-->
 
     	<div class="askbox">
@@ -186,7 +212,7 @@
           <textarea class="form-control" rows="5" id="comment"></textarea>
         </div>
     	</div><!-- /.askbox-->
-    </div><!-- /.section1-->
+    </div><!-- /#aboutme-->
     <div id="photoalb">
       <h1 class="title" id="photoalbtitle">My Photoalbum</h1>
       <div class="photoalbum">
@@ -215,7 +241,7 @@
   $(document).ready(function(){
     var x=1;
     var y=0;
-    $("#btn").on("click",function(){
+    $("#btnn").on("click",function(){
       do{
         for(var i=x; i<5; i++){
           do{
@@ -244,13 +270,38 @@
       
      });
     $('#li1').hover(function(){
-      $("#limg1").fadeToggle(100);
+      $("#limg1").fadeToggle(100);//tried to do toggleclass(".activeli")but didnt work
     });
+
+    $('#li1').mouseenter(function(){
+      $(this).css({'border':'1px solid #84DAED'});
+    });
+
+    $('#li1').mouseleave(function(){
+      $(this).css({'border':'0.5px solid #DFD6D4'});
+    });
+
     $('#li2').hover(function(){
       $("#limg2").fadeToggle(100);
     });
+
+    $('#li2').mouseenter(function(){
+      $(this).css({'border':'1px solid #84DAED'});
+    });
+
+    $('#li2').mouseleave(function(){
+      $(this).css({'border':'0.5px solid #DFD6D4'});
+    });
+
     $('#li3').hover(function(){
       $("#limg3").fadeToggle(100);
+    });
+    $('#li3').mouseenter(function(){
+      $(this).css({'border':'1px solid #84DAED'});
+    });
+
+    $('#li3').mouseleave(function(){
+      $(this).css({'border':'0.5px solid #DFD6D4'});
     });
   });
 </script>
