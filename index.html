@@ -184,8 +184,7 @@
       border-radius: 4px;
       height:150px;
       width: 175px;
-      left:0px;
-      top: 0px;
+      position: relative;
     }
 
     .askbox{
@@ -277,31 +276,31 @@
           <div class="col-md-9">
             <div class="row row1">
               <div class="col-md-3">
-                <img class="limg" id="limg1" src="clarinet.jpg"/>
+                <img class="limg" id="limg1" title="li1" src="clarinet.jpg"/>
               </div>  
               <div class="col-md-3">
-                <img class="limg" id="limg2" src="ex.jpg"/>
+                <img class="limg" id="limg2" title="li2" src="ex.jpg"/>
               </div>
               <div class="col-md-3">
-                <img class="limg" id="limg3" src="travel.jpg"/>
+                <img class="limg" id="limg3" title="li3" src="travel.jpg"/>
               </div>
               <div class="col-md-3">
-                <img class="limg" id="limg4" src="relax.jpg"/>
+                <img class="limg" id="limg4" title="li4" src="relax.jpg"/>
               </div>
             </div>
             
             <div class="row row2">
               <div class="col-md-3">
-                <img class="limg" id="limg5" src="music.jpg"/>
+                <img class="limg" id="limg5" title="li5"src="music.jpg"/>
               </div>
               <div class="col-md-3">
-                <img class="limg" id="limg6" src="eat.jpg"/>
+                <img class="limg" id="limg6" title="li6" src="eat.jpg"/>
               </div>
               <div class="col-md-3">
-                <img class="limg" id="limg7" src="hike.jpg"/>
+                <img class="limg" id="limg7" title="li7" src="hike.jpg"/>
               </div>
               <div class="col-md-3">
-                <img class="limg" id="limg8" src="drink.jpg"/>
+                <img class="limg" id="limg8" title="li8" src="drink.jpg"/>
               </div>
               
             </div>
@@ -463,14 +462,27 @@
 
     $('p[id^="li"]').mouseenter(function(){
       var x= $(this).attr("title");
-        $('#'+x).animate({left: "-=2.5px",height: "+=5px",width: "+=5px",top: "-=5px"},"fast");
+        $('#'+x).animate({left: "-=10px",height: "+=20px",width: "+=20px",top: "-=10px"},"fast");
     });
     
     $('p[id^="li"]').mouseleave(function(){
       var x= $(this).attr("title");
-        $('#'+x).animate({left: '+=2.5px',height: '-=5px',width: '-=5px',top: '+=2.5px'},"fast");
+        $('#'+x).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"fast");
+    });
+
+    $('img[id^="limg"]').hover(function(){
+      $(this).toggleClass("activelimg");
+      var y= $(this).attr("title");
+      $('#'+y).toggleClass("activeli");
     });
     
+    $('img[id^="limg"]').mouseenter(function(){
+      $(this).animate({left: "-=10px",height: "+=20px",width: "+=20px",top: "-=10px"},"fast");
+    });
+    
+    $('img[id^="limg"]').mouseleave(function(){
+      $(this).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"fast");
+    });
   });
 </script>
 </body>
