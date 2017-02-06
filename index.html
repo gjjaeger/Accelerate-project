@@ -12,8 +12,8 @@
     }
 
     .navigationbar {
-      position: fixed;
-      top:0px;
+      position: fixed; 
+      top:0px; 
       width: 100%;
       z-index: 10;
       
@@ -146,12 +146,11 @@
       border: 0px solid rgba(245, 49, 14, 0.2);
       border-radius: 10px;
     }
-    #li1, #li2, #li3{
-      display: none;
+    .li{
       padding-top: 10px;
       padding-bottom: 10px;
       text-align: center;
-      border: 0.5px solid #DFD6D4;
+      border: 1px solid #DFD6D4;
       border-radius: 8px;
       width: 50%;
       font-size: 16px;
@@ -159,52 +158,47 @@
       font-family: helvetica;      
       background: white;
       position: relative;
-
+      margin-left: 25%;
     
     }
 
     #li1 {
-      margin-left: 22.5%;
       margin-top: 5%;  
     }
 
-    #li2{
-      
-      margin-left:27.5%;
-    }
-
-    #li3{
-      margin-left: 22.5%;
-    }
-    #limg1, #limg2, #limg3{
-      display: none;
+    .limg{
       border: 1px solid #DFD6D4;
       border-radius: 4px;
-    }
-
-    #limg1{
-      position: absolute;
-      top:75px;
-      left: 600px;
-      
-    }
-
-    #limg2{
-      position: absolute;
-      top:75px;
-      left: 775px;
-    }
-
-    #limg3{
-      position: absolute;
-      top:75px;
-      left: 950px;
-    }
-    .litemphoto {
       width: 150px;
       display: block;
       position: absolute;
       
+    }
+
+    .row1{
+      top:150px;
+    }
+
+    .row2{
+      top:325px;
+    }
+
+    #limg1{
+      left: 450px;
+      
+    }
+
+    #limg2{
+      left: 625px;
+    }
+
+    #limg3{
+      left: 800px;
+    }
+
+    #limg4{
+      position: absolute;
+      left: 975px;
     }
 
     .askbox{
@@ -232,8 +226,13 @@
       padding-top: 20px;
     }
 
-    .activeli{
+    .activeli {
       border: 1px solid #84DAED;
+    }
+
+    .activelimg {
+      border: 2px solid #84DAED;
+     
     }
 
     *{
@@ -256,7 +255,8 @@
 	<div class="navigationbar">
     <nav class="navbar navbar-default" id="navibar">
       <div class="container-fluid">    
-          <ul class="nav navbar-nav">
+          
+          <ul class="nav navbar-nav navbar-fixed-top">
             <li class="active"><a class="navbar-brand" href="#">Home</a>
             <li><a href="#aboutme">About Me</a></li>
             <li><a href="#photoalb">Photo Album</a></li>
@@ -284,14 +284,23 @@
     	<div class="likelist">	
     		<p id="listtitle">Things I like to do... </p>
     		<div class="listitems">
-    			<p id="li1">laugh</p>
-    			<p id="li2">learn new languages</p>
-    			<p id="li3">make new friends</p>
+    			<p class="li" id="li1">1</p>
+    			<p class="li" id="li2">2</p>
+    			<p class="li" id="li3">3</p>
+          <p class="li" id="li4">4</p>
+          <p class="li" id="li5">5</p>
+          <p class="li" id="li6">6</p>
+          <p class="li" id="li7">7</p>
+          <p class="li" id="li8">8</p>
     		</div><!-- /.listitem-->
-        <img id="limg1" class="litemphoto" src="gabriel.jpg"/>
-        <img id="limg2" class="litemphoto" src="gabriel.jpg"/>
-        <img id="limg3" class="litemphoto" src="gabriel.jpg"/>
-        <button class="btn" id="btnn">Find out what I like</button>
+        <img class="limg row1" id="limg1" src="gabriel.jpg"/>
+        <img class="limg row1" id="limg2" src="gabriel.jpg"/>
+        <img class="limg row1" id="limg3" src="gabriel.jpg"/>
+        <img class="limg row1" id="limg4" src="gabriel.jpg"/>
+        <img class="limg row2" id="limg1" src="gabriel.jpg"/>
+        <img class="limg row2" id="limg2" src="gabriel.jpg"/>
+        <img class="limg row2" id="limg3" src="gabriel.jpg"/>
+        <img class="limg row2" id="limg4" src="gabriel.jpg"/>
     	 </div><!-- /.likelist-->
 
     	<div class="askbox">
@@ -322,7 +331,10 @@
       </div><!-- /.photoalbum-->
     </div><!-- /.section2-->
     <div id="readme">
-      <p>readme comes here</p>
+      <h1 class="title" id="#readme">Download the Read Me</h1>
+      <form method="get" action="hello.docx">
+        <button type="submit" id="btnn">Click here to download</button>
+      </form>
     </div>
   </div> <!-- /.container-->
 <script>
@@ -357,39 +369,109 @@
       while(x<0);
       
      });
+    
     $('#li1').hover(function(){
-      $("#limg1").fadeToggle(100);//tried to do toggleclass(".activeli")but didnt work
+      $(this).toggleClass("activeli");
+      $('#limg1').toggleClass("activelimg");
     });
 
     $('#li1').mouseenter(function(){
-      $(this).css({'border':'1px solid #84DAED'});
+      $('#limg1').animate({left: '-=5px',height: '+=10px',width: '+=10px',top: '-=5px'},"fast");
     });
 
     $('#li1').mouseleave(function(){
-      $(this).css({'border':'0.5px solid #DFD6D4'});
+      $('#limg1').animate({left: '+=5px',height: '-=10px',width: '-=10px',top: '+=5px'},"fast");
     });
 
     $('#li2').hover(function(){
-      $("#limg2").fadeToggle(100);
+      $(this).toggleClass("activeli");
+      $('#limg2').toggleClass("activelimg");
     });
 
     $('#li2').mouseenter(function(){
-      $(this).css({'border':'1px solid #84DAED'});
+      $('#limg2').animate({left: '-=5px',height: '+=10px',width: '+=10px',top: '-=5px'},"fast");
     });
 
     $('#li2').mouseleave(function(){
-      $(this).css({'border':'0.5px solid #DFD6D4'});
+      $('#limg2').animate({left: '+=5px',height: '-=10px',width: '-=10px',top: '+=5px'},"fast");
     });
 
     $('#li3').hover(function(){
-      $("#limg3").fadeToggle(100);
+      $(this).toggleClass("activeli");
+      $('#limg3').toggleClass("activelimg");
     });
+
     $('#li3').mouseenter(function(){
-      $(this).css({'border':'1px solid #84DAED'});
+      $('#limg3').animate({left: '-=5px',height: '+=10px',width: '+=10px',top: '-=5px'},"fast");
     });
 
     $('#li3').mouseleave(function(){
-      $(this).css({'border':'0.5px solid #DFD6D4'});
+      $('#limg3').animate({left: '+=5px',height: '-=10px',width: '-=10px',top: '+=5px'},"fast");
+    });
+
+    $('#li4').hover(function(){
+      $(this).toggleClass("activeli");
+      $('#limg4').toggleClass("activelimg");
+    });
+
+    $('#li4').mouseenter(function(){
+      $('#limg4').animate({left: '-=5px',height: '+=10px',width: '+=10px',top: '-=5px'},"fast");
+    });
+
+    $('#li4').mouseleave(function(){
+      $('#limg4').animate({left: '+=5px',height: '-=10px',width: '-=10px',top: '+=5px'},"fast");
+    });
+
+    $('#li5').hover(function(){
+      $(this).toggleClass("activeli");
+      $('#limg1.row2').toggleClass("activelimg");
+    });
+
+    $('#li5').mouseenter(function(){
+      $('#limg1.row2').animate({left: '-=5px',height: '+=10px',width: '+=10px',top: '-=5px'},"fast");
+    });
+
+    $('#li5').mouseleave(function(){
+      $('#limg1.row2').animate({left: '+=5px',height: '-=10px',width: '-=10px',top: '+=5px'},"fast");
+    });
+
+    $('#li6').hover(function(){
+      $(this).toggleClass("activeli");
+      $('#limg2.row2').toggleClass("activelimg");
+    });
+
+    $('#li6').mouseenter(function(){
+      $('#limg2.row2').animate({left: '-=5px',height: '+=10px',width: '+=10px',top: '-=5px'},"fast");
+    });
+
+    $('#li6').mouseleave(function(){
+      $('#limg2.row2').animate({left: '+=5px',height: '-=10px',width: '-=10px',top: '+=5px'},"fast");
+    });
+
+    $('#li7').hover(function(){
+      $(this).toggleClass("activeli");
+      $('#limg3.row2').toggleClass("activelimg");
+    });
+
+    $('#li7').mouseenter(function(){
+      $('#limg3.row2').animate({left: '-=5px',height: '+=10px',width: '+=10px',top: '-=5px'},"fast");
+    });
+
+    $('#li7').mouseleave(function(){
+      $('#limg3.row2').animate({left: '+=5px',height: '-=10px',width: '-=10px',top: '+=5px'},"fast");
+    });
+     
+    $('#li8').hover(function(){
+      $(this).toggleClass("activeli");
+      $('#limg4.row2').toggleClass("activelimg");
+    });
+
+    $('#li8').mouseenter(function(){
+      $('#limg4.row2').animate({left: '-=5px',height: '+=10px',width: '+=10px',top: '-=5px'},"fast");
+    });
+
+    $('#li8').mouseleave(function(){
+      $('#limg4.row2').animate({left: '+=5px',height: '-=10px',width: '-=10px',top: '+=5px'},"fast");
     });
   });
 </script>
