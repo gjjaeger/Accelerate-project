@@ -21,7 +21,7 @@
       
     }
 
-    li{
+    #navibar li a{
       color: white;
     }
     
@@ -148,63 +148,44 @@
       margin-left: 15%;
     }
     .listitems{
-      position: relative;
-      display: block;
-      width: 40%;
+     
       border: 0px solid rgba(245, 49, 14, 0.2);
       border-radius: 10px;
+     
     }
     .li{
-      padding-top: 2%;
-      padding-bottom: 2%;
+      padding-top: 7px;
+      padding-bottom: 7px;
       text-align: center;
       border: 1px solid #DFD6D4;
       border-radius: 4px;
-      width: 50%;
-      font-size: 100%;
+      width: 200px;
+      font-size: 12px;
       text-transform: uppercase;    
       background: white;
       position: relative;
-      margin-left: 25%;
-      margin-top: -1%;
+      margin-left: 30px;
+      
     }
 
     #li1 {
       margin-top: 5%;  
     }
+    .row1{
+      margin:20px auto;
+    }
+
+    .row2{
+      margin: 20px auto;
+    }
 
     .limg{
       border: 1px solid #DFD6D4;
       border-radius: 4px;
-      width: 12%;
-      height: 25%;
-      display: block;
-      position: absolute;
-    }
-
-    .row1{
-      top:185%;
-    }
-
-    .row2{
-      top:212%;
-    }
-
-    #limg1{
-      left: 36%;
-      
-    }
-
-    #limg2{
-      left: 49%;
-    }
-
-    #limg3{
-      left: 62%;
-    }
-
-    #limg4{
-      left: 75%;
+      height:150px;
+      width: 175px;
+      left:0px;
+      top: 0px;
     }
 
     .askbox{
@@ -228,10 +209,6 @@
       margin-top: 3%;
     }
 
-    .row {
-      padding-top: 2%;
-    }
-
     .activeli {
       border: 1px solid #84DAED;
       background-color: #D9DDDE;
@@ -239,11 +216,10 @@
 
     .activelimg {
       border: 2px solid #84DAED;
-     
     }
 
     *{
-      border:0px solid black;
+      border:1px solid black;
       font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     }
     body {
@@ -285,27 +261,53 @@
       <div class="hr">
         <p></p>
       </div>
-    	<div class="likelist">	
-    		<h1 id="listtitle">Things I like to... </h1>
-    		<div class="listitems">
-    			<p class="li" id="li1"><span class="glyphicon glyp">&#xe002;</span>play the clarinet</p>
-    			<p class="li" id="li2"><span class="glyphicon glyp">&#xf8ff;</span>exercise</p>
-    			<p class="li" id="li3"><span class="glyphicon glyp">&#xe135;</span>travel</p>
-          <p class="li" id="li4"><span class="glyphicon glyphicon-sunglasses glyp"></span>relax</p>
-          <p class="li" id="li5"><span class="glyphicon glyphicon-cd glyp"></span>listen to music</p>
-          <p class="li" id="li6"><span class="glyphicon glyphicon-cutlery glyp"></span>eat</p>
-          <p class="li" id="li7"><span class="glyphicon glyphicon-leaf glyp"></span>hiking</p>
-          <p class="li" id="li8"><span class="glyphicon glyphicon-tint glyp"></span>drink</p>
-    		</div><!-- /.listitem-->
-        <img class="limg row1" id="limg1" src="clarinet.jpg"/>
-        <img class="limg row1" id="limg2" src="ex.jpg"/>
-        <img class="limg row1" id="limg3" src="travel.jpg"/>
-        <img class="limg row1" id="limg4" src="relax.jpg"/>
-        <img class="limg row2" id="limg1" src="music.jpg"/>
-        <img class="limg row2" id="limg2" src="eat.jpg"/>
-        <img class="limg row2" id="limg3" src="hike.jpg"/>
-        <img class="limg row2" id="limg4" src="drink.jpg"/>
-    	 </div><!-- /.likelist-->
+    	<div class="row">
+        <div class="likelist">	
+      		<h1 id="listtitle">Things I like to do... </h1>
+      		<div class="listitems col-md-3">
+      			<p class="li" id="li1" title="limg1"><span class="glyphicon glyp">&#xe002;</span>play instruments</p>
+      			<p class="li" id="li2" title="limg2"><span class="glyphicon glyp">&#xf8ff;</span>exercise</p>
+      			<p class="li" id="li3" title="limg3"><span class="glyphicon glyp">&#xe135;</span>travel</p>
+            <p class="li" id="li4" title="limg4"><span class="glyphicon glyphicon-sunglasses glyp"></span>relax</p>
+            <p class="li" id="li5" title="limg5"><span class="glyphicon glyphicon-cd glyp"></span>listen to music</p>
+            <p class="li" id="li6" title="limg6"><span class="glyphicon glyphicon-cutlery glyp"></span>eat</p>
+            <p class="li" id="li7" title="limg7"><span class="glyphicon glyphicon-leaf glyp"></span>hiking</p>
+            <p class="li" id="li8" title="limg8"><span class="glyphicon glyphicon-tint glyp"></span>drink</p>
+      		</div><!-- /.listitem-->
+          <div class="col-md-9">
+            <div class="row row1">
+              <div class="col-md-3">
+                <img class="limg" id="limg1" src="clarinet.jpg"/>
+              </div>  
+              <div class="col-md-3">
+                <img class="limg" id="limg2" src="ex.jpg"/>
+              </div>
+              <div class="col-md-3">
+                <img class="limg" id="limg3" src="travel.jpg"/>
+              </div>
+              <div class="col-md-3">
+                <img class="limg" id="limg4" src="relax.jpg"/>
+              </div>
+            </div>
+            
+            <div class="row row2">
+              <div class="col-md-3">
+                <img class="limg" id="limg5" src="music.jpg"/>
+              </div>
+              <div class="col-md-3">
+                <img class="limg" id="limg6" src="eat.jpg"/>
+              </div>
+              <div class="col-md-3">
+                <img class="limg" id="limg7" src="hike.jpg"/>
+              </div>
+              <div class="col-md-3">
+                <img class="limg" id="limg8" src="drink.jpg"/>
+              </div>
+              
+            </div>
+          </div>
+      	</div><!-- /.likelist-->
+      </div>
 
     	<div class="askbox">
     		<div class="form-group">
@@ -343,37 +345,8 @@
   </div> <!-- /.container-->
 <script>
   $(document).ready(function(){
-    var x=1;
-    var y=0;
-    $("#btnn").on("click",function(){
-      do{
-        for(var i=x; i<5; i++){
-          do{
-            if(i<4){
-              $('#li'+i).fadeIn(500);
-              x++;
-              $(this).text("More");
-              if(i==3){
-                $(this).text("Hide List");
-                break;
-              }
-            }
-            else {
-              for(var j=1; j<4; j++){
-              $('#li'+j).hide();
-              $(this).text("Find out what I like");
-              x=1;
-              }
-            }   
-          }
-          while(x<0); 
-        break;
-        }
-      }
-      while(x<0);
-      
-     });
     
+    /*
     $('#li1').hover(function(){
       $(this).toggleClass("activeli");
       $('#limg1.row1').toggleClass("activelimg");
@@ -481,6 +454,23 @@
     $('#frfc').hover(function(){
       $(this).toggleClass("activelimg");
     });
+    */
+    $('p[id^="li"]').hover(function(){
+      $(this).toggleClass("activeli");
+      var x= $(this).attr("title");
+      $('#'+x).toggleClass("activelimg");
+    });
+
+    $('p[id^="li"]').mouseenter(function(){
+      var x= $(this).attr("title");
+        $('#'+x).animate({left: "-=2.5px",height: "+=5px",width: "+=5px",top: "-=5px"},"fast");
+    });
+    
+    $('p[id^="li"]').mouseleave(function(){
+      var x= $(this).attr("title");
+        $('#'+x).animate({left: '+=2.5px',height: '-=5px',width: '-=5px',top: '+=2.5px'},"fast");
+    });
+    
   });
 </script>
 </body>
