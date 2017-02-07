@@ -167,6 +167,19 @@
       margin-left: 30px;
       
     }
+    .col-xs-12 .li{
+      padding-top: 2px;
+      padding-bottom: 2px;
+      text-align: center;
+      border: 1px solid #DFD6D4;
+      border-radius: 4px;
+      width:160px;
+      font-size: 12px;
+      text-transform: uppercase;    
+      background: white;
+      
+      margin-left: 15px;
+    }
 
     #li1 {
       margin-top: 5%;  
@@ -229,6 +242,35 @@
       left:10%;
     }
 
+  @media (min-width:600px){
+    .listitems{
+      width:100%;
+    }
+    .li{
+      display: inline-block;
+      width: 140px;
+    }
+    .glyp{
+      left:4px;
+    }
+    .rowxs{
+      width:100%;
+    }
+    .limg{
+      display: inline-block;
+      width: 200px;
+    }
+    .photoxs1, .photoxs2{
+      display: inline-block;
+      margin: 10px 10px;
+
+    }
+    .photoxs1{ 
+      margin-left: 110px;
+    }
+    
+  }
+
 	</style>
 </head>
 
@@ -260,13 +302,18 @@
       <div class="hr">
         <p></p>
       </div>
-    	<div class="row">
+    	 <div class="row">
         <div class="likelist">	
       		<h1 id="listtitle">Things I like to do... </h1>
       		<div class="listitems col-md-3">
-      			<p class="li" id="li1" title="limg1"><span class="glyphicon glyp">&#xe002;</span>play instruments</p>
-      			<p class="li" id="li2" title="limg2"><span class="glyphicon glyp">&#xf8ff;</span>exercise</p>
-      			<p class="li" id="li3" title="limg3"><span class="glyphicon glyp">&#xe135;</span>travel</p>
+            
+              <p class="li" id="li1" title="limg1"><span class="glyphicon glyp">&#xe002;</span>play instruments</p>
+           
+            
+      			 <p class="li" id="li2" title="limg2"><span class="glyphicon glyp">&#xf8ff;</span>exercise</p>
+          
+      			 <p class="li" id="li3" title="limg3"><span class="glyphicon glyp">&#xe135;</span>travel</p>
+           
             <p class="li" id="li4" title="limg4"><span class="glyphicon glyphicon-sunglasses glyp"></span>relax</p>
             <p class="li" id="li5" title="limg5"><span class="glyphicon glyphicon-cd glyp"></span>listen to music</p>
             <p class="li" id="li6" title="limg6"><span class="glyphicon glyphicon-cutlery glyp"></span>eat</p>
@@ -274,32 +321,32 @@
             <p class="li" id="li8" title="limg8"><span class="glyphicon glyphicon-tint glyp"></span>drink</p>
       		</div><!-- /.listitem-->
           <div class="col-md-9">
-            <div class="row row1">
-              <div class="col-md-3">
+            <div class="row row1 rowxs">
+              <div class="col-md-3 photoxs1">
                 <img class="limg" id="limg1" title="li1" src="clarinet.jpg"/>
               </div>  
-              <div class="col-md-3">
+              <div class="col-md-3 photoxs2">
                 <img class="limg" id="limg2" title="li2" src="ex.jpg"/>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 photoxs1">
                 <img class="limg" id="limg3" title="li3" src="travel.jpg"/>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 photoxs2">
                 <img class="limg" id="limg4" title="li4" src="relax.jpg"/>
               </div>
             </div>
             
-            <div class="row row2">
-              <div class="col-md-3">
+            <div class="row row2 rowxs">
+              <div class="col-md-3 photoxs1">
                 <img class="limg" id="limg5" title="li5"src="music.jpg"/>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 photoxs2">
                 <img class="limg" id="limg6" title="li6" src="eat.jpg"/>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 photoxs1">
                 <img class="limg" id="limg7" title="li7" src="hike.jpg"/>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 photoxs2">
                 <img class="limg" id="limg8" title="li8" src="drink.jpg"/>
               </div>
               
