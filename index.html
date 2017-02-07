@@ -241,6 +241,9 @@
       float: left;
       left:10%; 
     }
+    #tester{
+      display:none;
+    }
 
   @media(max-device-width:986px){
     .listitems{
@@ -249,6 +252,8 @@
     .li{
       display: inline-block;
       width: 140px;
+      border: 2px solid #DFD6D4;
+      font-size: 16px;
     }
     .glyp{
       left:4px;
@@ -258,7 +263,9 @@
     }
     .limg{
       display: inline-block;
-      width: 200px;
+      width: 280px;
+      height:220px;
+      position: relative;
     }
     .photoxs1, .photoxs2{
       display: inline-block;
@@ -266,7 +273,7 @@
 
     }
     .photoxs1{ 
-      margin-left: 16.5%;
+      margin-left: 5.5%;
     }
     .row1{
       margin:0px auto;
@@ -274,9 +281,6 @@
 
     .row2{
       margin: 0px auto;
-    }
-    #tester{
-      display:none;
     }
   }
 
@@ -286,25 +290,29 @@
     }
     .li{
       display: inline-block;
-      width: 10%;
+      width: 20%;
+      border: 2px solid #DFD6D4;
+      font-size: 16px;
     }
     .glyp{
-      left:4px;
+      left:1%;
     }
     .rowxs{
       width:100%;
     }
     .limg{
       display: inline-block;
-      width: 200px;
+      width: 300px;
+      height:220px;
+      position: relative;
     }
     .photoxs1, .photoxs2{
       display: inline-block;
-      margin: 10px 20px;
+      margin: 2% 2%;
 
     }
     .photoxs1{ 
-      margin-left: 15%;
+      margin-left: 3%;
     }
     .row1{
       margin:0px auto;
@@ -313,14 +321,14 @@
     .row2{
       margin: 0px auto;
     }
-    #tester{
-      display:none;
-    }
     
   }
   @media only screen and (min-device-width:1000px) and (max-width:1200px){
     .limg{
       width: 160px;
+    }
+    #tester{
+      display:none;
     }
   }
 	</style>
@@ -359,7 +367,7 @@
       		<h1 id="listtitle">Things I like to do... </h1>
       		<div class="listitems col-md-3">
             
-              <p class="li" id="li1" title="limg1"><span class="glyphicon glyp">&#xe002;</span>play instruments</p>
+              <p class="li" id="li1" title="limg1"><span class="glyphicon glyp">&#xe002;</span>sleep</p>
            
             
       			 <p class="li" id="li2" title="limg2"><span class="glyphicon glyp">&#xf8ff;</span>exercise</p>
@@ -367,7 +375,7 @@
       			 <p class="li" id="li3" title="limg3"><span class="glyphicon glyp">&#xe135;</span>travel</p>
            
             <p class="li" id="li4" title="limg4"><span class="glyphicon glyphicon-sunglasses glyp"></span>relax</p>
-            <p class="li" id="li5" title="limg5"><span class="glyphicon glyphicon-cd glyp"></span>listen to music</p>
+            <p class="li" id="li5" title="limg5"><span class="glyphicon glyphicon-cd glyp"></span>dance</p>
             <p class="li" id="li6" title="limg6"><span class="glyphicon glyphicon-cutlery glyp"></span>eat</p>
             <p class="li" id="li7" title="limg7"><span class="glyphicon glyphicon-leaf glyp"></span>hiking</p>
             <p class="li" id="li8" title="limg8"><span class="glyphicon glyphicon-tint glyp"></span>drink</p>
@@ -441,61 +449,73 @@
       </form>
     </div>
   </div> <!-- /.container-->
+  <div id="tester">
+  </div>
 <script>
   $(document).ready(function(){
-    $('p[id^="li"]').hover(function(){
-      $(this).toggleClass("activeli");
-      var x= $(this).attr("title");
-      $('#'+x).toggleClass("activelimg");
-    });
+    if($('#tester').css('display')=='none')
+      $('p[id^="li"]').hover(function(){
+        $(this).toggleClass("activeli");
+        var x= $(this).attr("title");
+        $('#'+x).toggleClass("activelimg");
+      });
 
-    $('p[id^="li"]').mouseenter(function(){
-      var x= $(this).attr("title");
-        $('#'+x).animate({left: "-=10px",height: "+=20px",width: "+=20px",top: "-=10px"},"fast");
-    });
-    
-    $('p[id^="li"]').mouseleave(function(){
-      var x= $(this).attr("title");
-        $('#'+x).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"fast");
-    });
+      $('p[id^="li"]').mouseenter(function(){
+        var x= $(this).attr("title");
+          $('#'+x).animate({left: "-=10px",height: "+=20px",width: "+=20px",top: "-=10px"},"fast");
+      });
+      
+      $('p[id^="li"]').mouseleave(function(){
+        var x= $(this).attr("title");
+          $('#'+x).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"fast");
+      });
 
-    $('img[id^="limg"]').hover(function(){
-      $(this).toggleClass("activelimg");
-      var y= $(this).attr("title");
-      $('#'+y).toggleClass("activeli");
-    });
+      $('img[id^="limg"]').hover(function(){
+        $(this).toggleClass("activelimg");
+        var y= $(this).attr("title");
+        $('#'+y).toggleClass("activeli");
+      });
+      
+      $('img[id^="limg"]').mouseenter(function(){
+        $(this).animate({left: "-=10px",height: "+=20px",width: "+=20px",top: "-=10px"},"fast");
+      });
+      
+      $('img[id^="limg"]').mouseleave(function(){
+        $(this).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"fast");
+      });
+    }
     
-    $('img[id^="limg"]').mouseenter(function(){
-      $(this).animate({left: "-=10px",height: "+=20px",width: "+=20px",top: "-=10px"},"fast");
-    });
-    
-    $('img[id^="limg"]').mouseleave(function(){
-      $(this).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"fast");
-    });
 
-    
-
-    if( $('#tester').css('display')=='none') {
-      $('p[id^="li"]').on("click",function(){
+    if($('#tester').css('display')=='none') {
+      $('p[id^="li"]').on("tap",function(){
         $(this).addClass("activeli");
         var x= $(this).attr("title");
         $('#'+x).addClass("activelimg");
       });
 
-      $('p[id^="li"]').on("click",function(){
+      $('p[id^="li"]').on("touchstart",function(){
         var x= $(this).attr("title");
         $('#'+x).animate({left: "-=10px",height: "+=20px",width: "+=20px",top: "-=10px"},"fast");
       });
 
-      $('img[id^="limg"]').on("click",function(){
+      $('p[id^="li"]').on("touchend",function(){
+        var x= $(this).attr("title");
+        $('#'+x).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"fast");
+      });
+
+      $('img[id^="limg"]').on("tap",function(){
         $(this).addClass("activelimg");
         var y= $(this).attr("title");
         $('#'+y).addClass("activeli");
       });
     
-      $('img[id^="limg"]').on("click",function(){
+      $('img[id^="limg"]').on("touchstart",function(){
         $(this).animate({left: "-=10px",height: "+=20px",width: "+=20px",top: "-=10px"},"fast");
-      });     
+      });    
+
+      $('img[id^="limg"]').on("touchend",function(){
+        $(this).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"fast");
+      }); 
     }
   });
 </script>
