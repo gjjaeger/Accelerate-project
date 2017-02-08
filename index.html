@@ -13,6 +13,10 @@
       width: 100%;
     }
 
+    .newnav{
+      background-color: white;
+    }
+
     .navigationbar {
       position: fixed; 
       top:0px; 
@@ -22,7 +26,7 @@
     }
 
     #navibar li a{
-      color: white;
+      color: black;
     }
     
 
@@ -76,49 +80,42 @@
     }
 
     .title {
-      max-width: 25%;
-      margin:auto;
       text-align: center;
-      border-bottom: 0.5px solid #DFD6D4;
-      padding-bottom: 1%;
-      margin-top: 4%;
+      margin-bottom: 24px;
+      
     }
 
     .intro{
-      display:block;
-      margin:auto;
-      padding-bottom: 1%;
+      
+      margin:20px 30px;
       border-bottom: 0px solid rgba(245, 49, 14, 0.2);
-      width: 70%;
+      color: #616161;
+      font-size: 1.4em;
+      line-height: 1.7em;
+    }
+      
     }
 
     .starter {
       display: block;
       position: relative;
-      margin-left: 25%;
-      margin-top:-18%;
       font-size: 100%;
       font-style: italic;
     }
 
-    .hr{
-      border-top: 1px solid rgba(245, 49, 14, 0.2);
-      height: 0px;
-      width: 75%;
-      float: right;
-    }
+   
 
     #aboutme{
       border-bottom: 1px solid rgba(245, 49, 14, 0.2);
-
-
     }
+
     .gjphoto{
       display:inline-block;
       border: 1px solid rgba(245, 49, 14, 0.2);
-      margin:6% 3%;
       border-radius: 100%;
-      width: 20%;
+      
+      
+     
     }
 
     #btnn{
@@ -151,59 +148,35 @@
      
       border: 0px solid rgba(245, 49, 14, 0.2);
       border-radius: 10px;
+      
      
     }
+
     .li{
-      padding-top: 7px;
-      padding-bottom: 7px;
+      padding-top: 14px;
+      padding-bottom: 14px;
       text-align: center;
       border: 1px solid #DFD6D4;
-      border-radius: 4px;
-      width: 200px;
-      font-size: 12px;
+      width:140px;
+      font-size: 20px;
       text-transform: uppercase;    
       background: white;
-      position: relative;
-      margin-left: 30px;
+      display: inline-block;
       
     }
-    .col-xs-12 .li{
-      padding-top: 2px;
-      padding-bottom: 2px;
-      text-align: center;
-      border: 1px solid #DFD6D4;
-      border-radius: 4px;
-      width:160px;
-      font-size: 12px;
-      text-transform: uppercase;    
-      background: white;
-      
-      margin-left: 15px;
-    }
-
-    #li1 {
-      margin-top: 5%;  
-    }
-    .row1{
-      margin:20px auto;
-    }
-
-    .row2{
-      margin: 20px auto;
-    }
+    
+  
 
     .limg{
-      border: 1px solid #DFD6D4;
-      border-radius: 4px;
-      height:150px;
-      width: 175px;
-      position: relative;
+      border-top: 0px solid #DFD6D4;
+      border-bottom: 0px solid #DFD6D4;
+      border-radius: 0px;
+      display: inline-block;
+      width: 300px;
+      height: 200px;
     }
 
-    .askbox{
-      margin: 4% auto;
-      width: 50%;
-    }
+   
 
     .photoalbum {
       margin-left: 8%;
@@ -227,15 +200,30 @@
     }
 
     .activelimg {
-      border: 2px solid #84DAED;
+      border: 4px solid #84DAED;
+      border-radius: 4px;
     }
 
     *{
       border:0px solid black;
-      font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+      font-family: 'Roboto','Raleway',"Helvetica Neue", Helvetica, Arial, sans-serif;
     }
     body {
-      font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+      font-family: 'Roboto','Raleway',"Helvetica Neue", Helvetica, Arial, sans-serif;
+      
+    }
+
+    p{
+      color: #616161;
+      font-size: 1.4em;
+      line-height: 1.7em;
+    }
+    h1{
+          color: #212121;
+    font-size: 4.725em;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 5px;
     }
     .glyp{
       float: left;
@@ -244,93 +232,77 @@
     #tester{
       display:none;
     }
-
-  @media(max-device-width:986px){
-    .listitems{
-      width:100%;
+    .photobanner{
+      max-height: 250px;
+      width: 3700px;
+      border-top: 1px solid #DFD6D4;
+      border-bottom: 1px solid #DFD6D4;
+      margin-left: -1370px;
     }
-    .li{
-      display: inline-block;
-      width: 140px;
-      border: 2px solid #DFD6D4;
-      font-size: 16px;
-    }
-    .glyp{
-      left:4px;
-    }
-    .rowxs{
-      width:100%;
-    }
-    .limg{
-      display: inline-block;
-      width: 280px;
-      height:220px;
-      position: relative;
-    }
-    .photoxs1, .photoxs2{
-      display: inline-block;
-      margin: 10px 10px;
-
-    }
-    .photoxs1{ 
-      margin-left: 5.5%;
-    }
-    .row1{
-      margin:0px auto;
+    #container {
+    width: 1200px;
+    display: block;
+    overflow: hidden;
+    margin: 50px auto;
+    margin-left: -15px;
+    background: white;
     }
 
-    .row2{
-      margin: 0px auto;
-    }
-  }
-
-  @media only screen and (min-device-width:986px) and (max-width:1000px){
-    .listitems{
-      width:100%;
-    }
-    .li{
-      display: inline-block;
-      width: 20%;
-      border: 2px solid #DFD6D4;
-      font-size: 16px;
-    }
-    .glyp{
-      left:1%;
-    }
-    .rowxs{
-      width:100%;
-    }
-    .limg{
-      display: inline-block;
-      width: 300px;
-      height:220px;
-      position: relative;
-    }
-    .photoxs1, .photoxs2{
-      display: inline-block;
-      margin: 2% 2%;
-
-    }
-    .photoxs1{ 
-      margin-left: 3%;
-    }
-    .row1{
-      margin:0px auto;
+    .backimg{
+      top:900px;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 250px;
+      background-image: url("backgroundd2.jpg");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      
+      display: block;
     }
 
-    .row2{
-      margin: 0px auto;
+    #backimg1{
+      background-image: url("backgroundd2.jpg");
     }
-    
-  }
-  @media only screen and (min-device-width:1000px) and (max-width:1200px){
-    .limg{
-      width: 160px;
+
+    #backimg2{
+      background-image: url("backgroundd.jpg")
     }
-    #tester{
-      display:none;
+    .img1{
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      filter: grayscale(100%);
+      filter: gray;
+      -webkit-filter: grayscale(1);
     }
-  }
+    .img1:hover {
+      filter: grayscale(0%);
+      -webkit-filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
+      filter: grayscale(0%);
+      filter: gray;
+      -webkit-filter: grayscale(0);
+      }
+    #titleborder{
+      border-bottom: 2px solid #84DAED;
+      margin-bottom: 24px;
+    }
+    .container-fluid{
+      padding:0;
+    }
+   
+   .photoalbum .row{
+    margin: 0;
+   }
+    ul{
+      padding:0; /*mybrowser was giving ul an automatic padding of 15px*/
+    }
+    .insideli{
+      padding:auto;/*trying to center the lis*/
+      display: block;
+    }
+
 	</style>
 </head>
 
@@ -352,81 +324,96 @@
     <a href="#aboutme" class="btn" id="btn1">Let's go</a>
     <img src="backgrnd.jpg">
   </div>
-  <div class="container">
+  
   	<div id="aboutme">
-      	<h1 class="title">About me</h1>
-    	<div class="intro">
-         <img class="gjphoto" src="gabriel.jpg"/>
-      		<p class="starter">Hey there! I am Gabriel and thanks for checking out this site. <br> To get to know me a little more, feel free to click on the button below</p>
-      </div><!-- /.intro-->
-      <div class="hr">
-        <p></p>
-      </div>
-    	 <div class="row">
-        <div class="likelist">	
-      		<h1 id="listtitle">Things I like to do... </h1>
-      		<div class="listitems col-md-3">
-            
-              <p class="li" id="li1" title="limg1"><span class="glyphicon glyp">&#xe002;</span>sleep</p>
-           
-            
-      			 <p class="li" id="li2" title="limg2"><span class="glyphicon glyp">&#xf8ff;</span>exercise</p>
-          
-      			 <p class="li" id="li3" title="limg3"><span class="glyphicon glyp">&#xe135;</span>travel</p>
-           
-            <p class="li" id="li4" title="limg4"><span class="glyphicon glyphicon-sunglasses glyp"></span>relax</p>
-            <p class="li" id="li5" title="limg5"><span class="glyphicon glyphicon-cd glyp"></span>dance</p>
-            <p class="li" id="li6" title="limg6"><span class="glyphicon glyphicon-cutlery glyp"></span>eat</p>
-            <p class="li" id="li7" title="limg7"><span class="glyphicon glyphicon-leaf glyp"></span>hiking</p>
-            <p class="li" id="li8" title="limg8"><span class="glyphicon glyphicon-tint glyp"></span>drink</p>
-      		</div><!-- /.listitem-->
-          <div class="col-md-9">
-            <div class="row row1 rowxs">
-              <div class="col-md-3 photoxs1">
-                <img class="limg" id="limg1" title="li1" src="clarinet.jpg"/>
-              </div>  
-              <div class="col-md-3 photoxs2">
-                <img class="limg" id="limg2" title="li2" src="ex.jpg"/>
-              </div>
-              <div class="col-md-3 photoxs1">
-                <img class="limg" id="limg3" title="li3" src="travel.jpg"/>
-              </div>
-              <div class="col-md-3 photoxs2">
-                <img class="limg" id="limg4" title="li4" src="relax.jpg"/>
-              </div>
-            </div>
-            
-            <div class="row row2 rowxs">
-              <div class="col-md-3 photoxs1">
-                <img class="limg" id="limg5" title="li5"src="music.jpg"/>
-              </div>
-              <div class="col-md-3 photoxs2">
-                <img class="limg" id="limg6" title="li6" src="eat.jpg"/>
-              </div>
-              <div class="col-md-3 photoxs1">
-                <img class="limg" id="limg7" title="li7" src="hike.jpg"/>
-              </div>
-              <div class="col-md-3 photoxs2">
-                <img class="limg" id="limg8" title="li8" src="drink.jpg"/>
-              </div>
-              
-            </div>
-          </div>
-      	</div><!-- /.likelist-->
-      </div>
-
-    	<div class="askbox">
-    		<div class="form-group">
-          <label for="comment">You have a question for me? Ask me here:</label>
-          <textarea class="form-control" rows="5" id="comment"></textarea>
+      <div class="container">
+        <div class="row">	
+          <h1 class="title col-md-8 col-md-offset-2">About me</h1>
         </div>
-    	</div><!-- /.askbox-->
+        <div class="row">
+          <div id="titleborder" class="col-md-2 col-md-offset-5">
+          </div>
+        </div>
+        <div class="row intro">
+           
+        	 <p class="starter col-md-8 col-md-offset-0">Hey there! I am Gabriel and thanks for checking out this site. To get to know me a little more, feel free to click on the button below</p>
+        </div><!-- /.intro-->
+      </div>  
+      <section class="divider">
+        <div class="container-fluid">
+          <div class="backimg" id="backimg1">
+          </div>
+        </div>
+      </section>
+    
+    <div class="container">
+    	 <div class="row">
+        
+      		<h1 id="listtitle">Things I like to do... </h1>
+      		<div class="row">
+            <ul class="listitems">
+              <div class="insideli">
+                <li class="li " id="li1" title="limg1"><span class="glyphicon glyp">&#xe002;</span>sleep</li>
+                <li class="li " id="li2" title="limg2"><span class="glyphicon glyp">&#xf8ff;</span>exercise</li>
+          			<li class="li " id="li3" title="limg3"><span class="glyphicon glyp">&#xe135;</span>travel</li>         
+                <li class="li " id="li4" title="limg4"><span class="glyphicon glyphicon-sunglasses glyp"></span>relax</li>
+                <li class="li " id="li5" title="limg5"><span class="glyphicon glyphicon-cd glyp"></span>dance</li>
+                <li class="li " id="li6" title="limg6"><span class="glyphicon glyphicon-cutlery glyp"></span>eat</li>
+                <li class="li " id="li7" title="limg7"><span class="glyphicon glyphicon-leaf glyp"></span>hiking</li>
+                <li class="li " id="li8" title="limg8"><span class="glyphicon glyphicon-tint glyp"></span>drink</li>
+              </div>
+          	</ul><!-- /.listitem-->
+          </div>
+          <div id="container">
+          <div class="photobanner">
+                <img class="limg" title="-2" src="hike.jpg"/>
+
+                <img class="limg" title="-1" src="drink.jpg"/>
+              
+                <img class="first limg" id="limg1" title="1" src="clarinet.jpg"/>
+               
+              
+                <img class="limg" id="limg2" title="2" src="ex.jpg"/>
+              
+             
+                <img class="limg" id="limg3" title="3" src="travel.jpg"/>
+              
+              
+                <img class="limg" id="limg4" title="4" src="relax.jpg"/>
+
+              
+                <img class="limg" id="limg5" title="5"src="music.jpg"/>
+             
+              
+                <img class="limg" id="limg6" title="6" src="eat.jpg"/>
+              
+             
+                <img class="limg" id="limg7" title="7" src="hike.jpg"/>
+              
+                <img class="limg" id="limg8" title="8" src="drink.jpg"/>
+
+                <img class="first limg" title="9" src="clarinet.jpg"/>
+
+                <img class="limg" title="10" src="ex.jpg"/>
+               
+           
+          </div>
+          </div>
+      	
+     
+    	
     </div><!-- /#aboutme-->
+    <section class="divider">
+        <div class="container-fluid">
+          <div class="backimg" id="backimg2">
+          </div>
+        </div>
+      </section>
     <div id="photoalb">
       <h1 class="title" id="photoalbtitle">My Photoalbum</h1>
       <div class="photoalbum">
         <div class="row">
-          <img class="col-md-3" id="frfc" src="gabriel.jpg"/>
+          <img class="img1 col-md-3" id="frfc" src="gabriel.jpg"/>
           <img class="col-md-3 col-md-offset-1" id="frsc" src="gabriel.jpg"/>
           <img class="col-md-3 col-md-offset-1" id="frtc" src="gabriel.jpg"/>
         </div>
@@ -453,23 +440,68 @@
   </div>
 <script>
   $(document).ready(function(){
-    if($('#tester').css('display')=='none')
-      $('p[id^="li"]').hover(function(){
+    /*
+      $('li[id^="li"]').hover(function(){
         $(this).toggleClass("activeli");
         var x= $(this).attr("title");
         $('#'+x).toggleClass("activelimg");
+        var soon=$('#'+x).attr("title");
+        var current=5;  
+        var diff=current-soon;
+        var imagewidth=300;//$('#'+x).width();
+        var move=-1370+(imagewidth*diff);//(parseInt($(".photobanner").css("margin-left").replace("px", "")))
+        $(".photobanner").animate({"margin-left":move},{ "duration": Math.abs(100+(diff*50)), "easing": "linear" });
+        
+      });
+*/
+
+      var target = $(".container").offset().top;
+      var interval = setInterval(function() {
+        if ($(window).scrollTop() >= target) {
+          $('#navibar').addClass("newnav");
+          clearInterval(interval);
+        }
+          }, 250);
+
+      var counter=0;
+      $('li[id^="li"]').mouseover(function(){
+        setInterval(function(){ 
+        counter++;
+          if(counter=>10){
+            $('li[id^="li"]').hover(function(){
+              $(this).toggleClass("activeli");
+              var x= $(this).attr("title");
+              $('#'+x).toggleClass("activelimg");
+              var soon=$('#'+x).attr("title");
+              var current=5;  
+              var diff=current-soon;
+              var imagewidth=300;//$('#'+x).width();
+              var move=-1370+(imagewidth*diff);//(parseInt($(".photobanner").css("margin-left").replace("px", "")))
+              $(".photobanner").animate({"margin-left":move},{ "duration": Math.abs(100+(diff*50)), "easing": "linear" });
+              counter=0;
+            });
+            
+
+          } 
+        }
+        , 100);
+        if('li[id^="li"]'.class()=="activeli"){
+          $('li[id^="li"]').mouseenter(function(){
+              var x= $(this).attr("title");
+                $('#'+x).animate({left: "-=10px",height: "+=20px",width: "+=20px",top: "-=10px"},"300");
+          });
+            
+          $('li[id^="li"]').mouseleave(function(){
+            var x= $(this).attr("title");
+              $('#'+x).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"300");
+          });
+        }
+            
       });
 
-      $('p[id^="li"]').mouseenter(function(){
-        var x= $(this).attr("title");
-          $('#'+x).animate({left: "-=10px",height: "+=20px",width: "+=20px",top: "-=10px"},"fast");
-      });
+
       
-      $('p[id^="li"]').mouseleave(function(){
-        var x= $(this).attr("title");
-          $('#'+x).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"fast");
-      });
-
+/*
       $('img[id^="limg"]').hover(function(){
         $(this).toggleClass("activelimg");
         var y= $(this).attr("title");
@@ -483,7 +515,7 @@
       $('img[id^="limg"]').mouseleave(function(){
         $(this).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"fast");
       });
-    }
+    
     
 
     if($('#tester').css('display')=='none') {
@@ -517,6 +549,7 @@
         $(this).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"fast");
       }); 
     }
+    */
   });
 </script>
 </body>
