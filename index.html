@@ -467,42 +467,33 @@
       var stillin=false;
       
       $('li[id^="li"]').mouseenter(function(){
-            
-            counter++;
-            stillin=true;
-              
-            $('li[id^="li"]').mouseover(function(){
-              var p = setInterval(function(){ 
-              counter++;
-              },500); 
-            });
+        stillin=true;
+        var x= $(this).attr("title");    
+        $(this).addClass("activeli");
+        $('#'+x).animate({left: "-=10px",height: "+=20px",width: "+=20px",top: "-=10px"},"700");
+        $('#'+x).addClass("activelimg");
+        var soon=$('#'+x).attr("title");
+        var current=5;  
+        var diff=current-soon;
+        var imagewidth=300;//$('#'+x).width();
+        var move=-1370+(imagewidth*diff);//(parseInt($(".photobanner").css("margin-left").replace("px", "")))
+        $(".photobanner").animate({"margin-left":move},{ "duration": 300, "easing": "linear" });
+      });
+      
+             
+      $('li[id^="li"]').mouseleave(function(){
+        var x= $(this).attr("title");
+        $('#'+x).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"700");
+        $(this).removeClass("activeli");
+        var x= $(this).attr("title");
+        $('#'+x).removeClass("activelimg"); 
+      });   
 
-            if(counter=>5&&stillin==true){ 
-              //$('li[id^="li"]').hover(function(){
-                var x= $(this).attr("title");
-                $('#'+x).animate({left: "-=10px",height: "+=20px",width: "+=20px",top: "-=10px"},"800");
-                $(this).addClass("activeli");
-                $('#'+x).addClass("activelimg");
-                var soon=$('#'+x).attr("title");
-                var current=5;  
-                var diff=current-soon;
-                var imagewidth=300;//$('#'+x).width();
-                var move=-1370+(imagewidth*diff);//(parseInt($(".photobanner").css("margin-left").replace("px", "")))
-                $(".photobanner").animate({"margin-left":move},{ "duration": 100, "easing": "linear" });
-                counter=0;
-               //} 
-            }
-            $('li[id^="li"]').mouseleave(function(){
-            var x= $(this).attr("title");
-            $('#'+x).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"800");
-            stillin=false;
-            counter=0;
-            $(this).removeClass("activeli");
-            var x= $(this).attr("title");
-            $('#'+x).removeClass("activelimg");
-            clearInterval(p);
-            });
-          });
+            
+            
+            
+          
+
 
  
   });
