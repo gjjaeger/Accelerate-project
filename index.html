@@ -13,6 +13,15 @@
       width: 100%;
     }
 
+    .navbelow{
+      
+      background: url("6.jpg");
+    }
+
+    .nav .navbar-nav li a{
+      opacity: 1;
+    }
+
     .newnav{
       background-color: white;
     }
@@ -29,37 +38,91 @@
       color: black;
     }
     
+    .backimg1t{
+      position: relative;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 95px;
+    
+    background-size: 100% auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    z-index: 10;
+    }
+    #backimg1t{
+      background-image: url("whitetriangle.png");
+    }
+
+    #backimg2t{
+      background-image: url("whitetriangle bottomright.png");
+      height:500px;
+    }
+
+    .backimg1a{
+      position: relative;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 95px;
+    
+      background-size: 100% auto;
+      background-position: top;
+      background-repeat: no-repeat;
+      z-index: 10;
+    }
+
+    #backimg2a{
+      background-image: url("whitetriangle topleft.png");
+    }
 
     .my-container {
       position: relative;
       overflow: hidden;
       height:100%;
+      width: auto;
+      
+      background-position: center;
+      /*background-size: 100% 100%;*/
+      background-repeat: no-repeat;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-attachment: fixed;
+      will-change: transform;
+      opacity: 0.8;
+     
     }
+    #fc{
+      background-image: url("backgrnd.jpg");
+    }
+    
+    #sc{
+      background-image: url("sg.jpg");
+      margin-top: 100px;
+    }
+
     .my-container h1 {
       padding-top: 15%;
       text-align: center;
       position: relative;
       z-index: 2;
-      font-size: 300%;
-      color: black;
+      font-size: 72px;
+      color: white;
+      font-weight: bold;
+      opacity: 1;
     } 
 
     .my-container h2{
       text-align: center;
-      color: black;
+      color: white;
       z-index: 3;
       position: relative;
       padding-top: 7%;
-    }
-
-    .my-container img {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: auto;
-      opacity: 0.9;
-      z-index: 0;
+      padding-bottom: 7%;
+      text-transform: uppercase;
+      font-weight: bold;
     }
 
     #btn1{
@@ -81,7 +144,8 @@
 
     .title {
       text-align: center;
-      margin-bottom: 24px;
+      margin-top:32px;
+      margin-bottom: 32px;
       
     }
 
@@ -97,9 +161,9 @@
     }
 
     .starter {
-      display: block;
-      position: relative;
-      font-size: 100%;
+      
+      margin-top: auto;
+      margin-bottom: auto;
       font-style: italic;
     }
 
@@ -148,6 +212,7 @@
      
       border: 0px solid rgba(245, 49, 14, 0.2);
       border-radius: 10px;
+      margin-bottom:60px;
       
      
     }
@@ -178,9 +243,7 @@
 
    
 
-    .photoalbum {
-      margin-left: 8%;
-    }
+   
 
     .photoalbum img{
       border:1px solid rgba(245, 49, 14, 0.2);
@@ -237,14 +300,16 @@
       width: 3700px;
       border-top: 1px solid #DFD6D4;
       border-bottom: 1px solid #DFD6D4;
-      margin-left: -1370px;
+      margin-left: -1410px;
+      overflow: hidden;
+
     }
+
     #container {
-    width: 1200px;
+  
     display: block;
     overflow: hidden;
-    margin: 50px auto;
-    margin-left: -15px;
+    
     background: white;
     }
 
@@ -252,13 +317,36 @@
       top:900px;
       bottom: 0px;
       left: 0px;
-      width: 100%;
+      width.: 100%;
       height: 250px;
-      background-image: url("backgroundd2.jpg");
       background-size: 100% 100%;
       background-repeat: no-repeat;
+      margin: 72px 0px;
+     
+    }
+
+   /* #backimg0{
+      background-image: url("backgrnd.jpg");
+      /*background-repeat: no-repeat;
+      background-size: cover;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.9;
+      z-index: 1;
+      width: 100%;
+      height: 250px;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      position: fixed;
+      top:0;
+     */ 
       
-      display: block;
+
+    }
+    .container-fluid, .container{
+      z-index: 1000;
     }
 
     #backimg1{
@@ -275,6 +363,10 @@
       filter: grayscale(100%);
       filter: gray;
       -webkit-filter: grayscale(1);
+      height:315px;
+      margin:15px 25px;
+     
+     
     }
     .img1:hover {
       filter: grayscale(0%);
@@ -286,7 +378,7 @@
       }
     #titleborder{
       border-bottom: 2px solid #84DAED;
-      margin-bottom: 24px;
+      margin-bottom: 72px;
     }
     .container-fluid{
       padding:0;
@@ -299,17 +391,40 @@
       padding:0; /*mybrowser was giving ul an automatic padding of 15px*/
     }
     .insideli{
-      padding:auto;/*trying to center the lis*/
+      text-align: center;
       display: block;
     }
+    #contactme{
+      background-color: #D9DDDE;
+      text-align: center;
+      border-top: 1px solid #84DAED;
+    }
+
+    .contactl{
+      width:50px;
+      height: 50px;
+      
+
+      
+    }
+
+    .address{
+      
+      text-align: center;
+      padding: 15px;
+      color:white;
+      text-transform: uppercase;
+    }
+    
+
+
 
 	</style>
 </head>
 
 <body data-spy="scroll" data-target="#navibar" data-offset="0">
 	
-    <nav class="navigationbar" id="navibar">
-         
+    <nav class="navigationbar" id="navibar"> 
           <ul class="nav navbar-nav">
             <li class="active"><a class="navbar-brand" href="#">Home</a>
             <li><a href="#aboutme">About Me</a></li>
@@ -317,13 +432,15 @@
             <li><a href="#readme">Read me</a></li>
           </ul>
     </nav>
- 
-	<div class="my-container">
+  <section class="container-fluid my-container" id="fc"> 
     <h1>Welcome</h1>
-    <h2>I appreciate you stopping by. Feel free to take a look around</h2>
-    <a href="#aboutme" class="btn" id="btn1">Let's go</a>
-    <img src="backgrnd.jpg">
-  </div>
+    <h2>to Gabriel's personal site</h2>
+    <div class="backimg0">
+      <div class="backimg1t" id="backimg1t">
+      </div>
+    </div>
+  </section>
+  
   
   	<div id="aboutme">
       <div class="container">
@@ -336,20 +453,23 @@
         </div>
         <div class="row intro">
            
-        	 <p class="starter col-md-8 col-md-offset-0">Hey there! I am Gabriel and thanks for checking out this site. To get to know me a little more, feel free to click on the button below</p>
+        	 <p class="starter col-md-8 col-md-offset-0">Hey there! Thanks for checking out this site. I am currently based in Hong Kong and always happy to connect. Feel free to contact me using my contact information at the bottom of this page.</p>
+           <img src="connect.png" class="col-md-4 col-md-offset-0" id="img"/>
         </div><!-- /.intro-->
       </div>  
-      <section class="divider">
-        <div class="container-fluid">
-          <div class="backimg" id="backimg1">
-          </div>
+      <section class="container-fluid">    
+        <div class="backimg" id="backimg1">
         </div>
       </section>
     
-    <div class="container">
-    	 <div class="row">
-        
-      		<h1 id="listtitle">Things I like to do... </h1>
+      <div class="container">
+        <div class="row"> 
+          <h1 class="title col-md-10 col-md-offset-1">Things I like to do</h1>
+        </div>
+        <div class="row">
+          <div id="titleborder" class="col-md-4 col-md-offset-4">
+          </div>
+        </div>
       		<div class="row">
             <ul class="listitems">
               <div class="insideli">
@@ -364,8 +484,8 @@
               </div>
           	</ul><!-- /.listitem-->
           </div>
-          <div id="container">
-          <div class="photobanner">
+          <div id="container" class="row">
+          <div class="photobanner col-md-12">
                 <img class="limg" title="-2" src="hike.jpg"/>
 
                 <img class="limg" title="-1" src="drink.jpg"/>
@@ -399,43 +519,67 @@
            
           </div>
           </div>
-      	
+      </div><!-- /#aboutme-->	
+        <section class="container-fluid my-container" id="sc"> 
+         
+            <div class="backimg1a" id="backimg2a">
+            </div>
+            <div class="backimg1t" id="backimg2t">
+            </div>
+        
+        </section>
      
     	
-    </div><!-- /#aboutme-->
-    <section class="divider">
-        <div class="container-fluid">
-          <div class="backimg" id="backimg2">
-          </div>
-        </div>
-      </section>
+    
+    
+    <div class="container">
     <div id="photoalb">
       <h1 class="title" id="photoalbtitle">My Photoalbum</h1>
       <div class="photoalbum">
         <div class="row">
-          <img class="img1 col-md-3" id="frfc" src="gabriel.jpg"/>
-          <img class="col-md-3 col-md-offset-1" id="frsc" src="gabriel.jpg"/>
-          <img class="col-md-3 col-md-offset-1" id="frtc" src="gabriel.jpg"/>
+          <img class="img1 col-md-5" id="frfc" src="river.jpg"/>
+          <img class="img1 col-md-5 col-md-offset-2" id="frsc" src="couple.jpg"/> 
         </div>
         <div class="row">
-          <img class="col-md-3" id="srfc"src="gabriel.jpg"/>
-          <img class="col-md-3 col-md-offset-1" id="srsc" src="gabriel.jpg"/>
-          <img class="col-md-3 col-md-offset-1" id="srtc"src="gabriel.jpg"/>
+          <img class="img1 col-md-5" id="frtc" src="piano.jpg"/>
+          <img class="img1 col-md-5 col-md-offset-2" id="srfc"src="deer.jpg"/>
         </div>
-        <div class="row">
-          <img class="col-md-3" id="trfc" src="gabriel.jpg"/>
-          <img class="col-md-3 col-md-offset-1" id="trsc" src="gabriel.jpg"/>
-          <img class="col-md-3 col-md-offset-1" id="trtc"src="gabriel.jpg"/>
+        <div class="row">  
+          <img class="img1 col-md-5" id="srsc" src="church.jpg"/>
+          <img class="img1 col-md-5 col-md-offset-2" id="srtc"src="birds.jpg"/>
         </div>
       </div><!-- /.photoalbum-->
     </div><!-- /.section2-->
-    <div id="readme">
-      <h1 class="title" id="#readme">Download the Read Me</h1>
-      <form method="get" action="hello.docx">
-        <button type="submit" id="btnn">Click here to download</button>
-      </form>
-    </div>
-  </div> <!-- /.container-->
+  </div>
+    <section class="container-fluid">    
+      <div class="backimg" id="backimg2">
+      </div>
+    </section>
+    <div class="container-fluid" id="contactme">
+      <div class="row"> 
+        <h1 class="title col-md-6 col-md-offset-3" id="">Contact me</h1>
+      </div>
+      <div class="row">
+        <div class="contacts col-md-4 col-md-offset-4"> 
+            <a class="col-md-4" href="https://www.linkedin.com/in/gabriel-jaeger-167811117">  
+              <img class="contactl" src="linkedin.png"> 
+            </a>
+            <a class="col-md-4 "href="https://www.facebook.com/gabrielm.jaeger?ref=bookmarks">  
+              <img class="contactl" src="fb.png"> 
+            </a>
+            <a class="col-md-4" href="mailto:gabrielm.jaeger@yahoo.de">  
+              <img class="contactl" src="email.png">
+            </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="address col-md-4 col-md-offset-4">
+          <p>1 Tralastreet</p>
+          <p>39283 Traland</p>
+          <p>Tralacountry</p>
+      </div>
+      
+   <!-- /.container-->
   <div id="tester">
   </div>
 <script>
@@ -458,36 +602,106 @@
       var target = $(".container").offset().top;
       var interval = setInterval(function() {
         if ($(window).scrollTop() >= target) {
-          $('#navibar').addClass("newnav");
+          $('#navibar').addClass("navbelow");
           clearInterval(interval);
         }
           }, 250);
-
-      var counter=0;
-      var stillin=false;
+    
+      var x;//corresponding img
+      
       
       $('li[id^="li"]').mouseenter(function(){
-        stillin=true;
+        x= $(this).attr("title");    
+        var soon=$('#'+x).attr("title");
+        var current=5;  
+        var diff=current-soon;
+        var imagewidth=$('#'+x).width();
+        var move=-1410+(imagewidth*diff);//(parseInt($(".photobanner").css("margin-left").replace("px", "")))
+        $(".photobanner").animate({"margin-left":move},{ "duration": 100, "easing": "linear" });
+        $(this).addClass("activeli");
+        $('#'+x).animate({left: "-=10px",height: "+=20px",width: "+=20px",top: "-=10px"},"400000000");
+        $('#'+x).addClass("activelimg");
+      });
+
+        $('li[id^="li"]').mouseleave(function(){
+          x= $(this).attr("title");
+          $('#'+x).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"400000000");
+          $(this).removeClass("activeli");
+          $('#'+x).removeClass("activelimg"); 
+        });
+/*
+      var e;//this id
+      var myTimeout;
+      $('li[id^="li"]').mouseenter(function(){  
+        e=$(this).attr('id');
+        $(this).addClass("hel");
+        myTimeout=setTimeout(function(){
+        x= $('#'+e).attr("title");    
+        $('#'+e).addClass("activeli");
+        $('#'+x).animate({left: "-=10px",height: "+=20px",width: "+=20px",top: "-=10px"},"100");
+        $('#'+x).addClass("activelimg");
+        e=$(this).attr('id');
+        }, 100);
+    
+        });
+      var gone=false;
+        
+      $('li[id^="li"]').mouseleave(function(){
+        $(this).removeClass("hel");
+      });
+
+       var interval = setInterval(function() {
+          if(('li[id^="li"]').width()>=310){
+          clearTimeout(myTimeout);
+          
+        x= $(this).attr("title");
+        $('#'+x).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"100");
+        $(this).removeClass("activeli");
+        
+        $('#'+x).removeClass("activelimg"); 
+        
+        }
+          clearInterval(interval);
+        
+          }, 50); 
+        
+/*
+        x= $(this).attr("title");
+        if($('#'+x).width()>=310){
+          
+          
+        }
+        });
+      //if (((isAnimating.attr('id'))!=('#'+e)){
+        //alert(this);
+      
+       // $(this).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"700");
+      //}
+/*
+function enteredpart2(var s){
+    var x= $('#'+s).attr("title");    
+        $(this).addClass("activeli");
+        $('#'+s).animate({left: "-=10px",height: "+=20px",width: "+=20px",top: "-=10px"},"700");
+        $('#'+s).addClass("activelimg");
+}
+/*
+      function enteredpart2(){
         var x= $(this).attr("title");    
         $(this).addClass("activeli");
         $('#'+x).animate({left: "-=10px",height: "+=20px",width: "+=20px",top: "-=10px"},"700");
         $('#'+x).addClass("activelimg");
-        var soon=$('#'+x).attr("title");
-        var current=5;  
-        var diff=current-soon;
-        var imagewidth=300;//$('#'+x).width();
-        var move=-1370+(imagewidth*diff);//(parseInt($(".photobanner").css("margin-left").replace("px", "")))
-        $(".photobanner").animate({"margin-left":move},{ "duration": 300, "easing": "linear" });
-      });
-      
-             
+      }
+
+    */ /*        
       $('li[id^="li"]').mouseleave(function(){
         var x= $(this).attr("title");
         $('#'+x).animate({left: '+=10px',height: '-=20px',width: '-=20px',top: '+=10px'},"700");
         $(this).removeClass("activeli");
         var x= $(this).attr("title");
         $('#'+x).removeClass("activelimg"); 
+        //clearTimeout(myTimeout);
       });   
+*/
 
             
             
