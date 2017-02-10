@@ -67,16 +67,14 @@
 .my-container {
   position: relative;
   overflow: hidden;
-  width: auto;
   background-position: center;
-  /*background-size: 100% 100%;*/
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-attachment: fixed;
-  will-change: transform;
+  
   opacity: 0.7;
 }
 
@@ -93,7 +91,7 @@
   padding-top: 145px;
   text-align: center;
   position: relative;
-  z-index: 2;
+  z-index: 5;
   font-size: 120px;
   color:white;
   font-weight: bold;
@@ -172,14 +170,20 @@
 }
 
 .li{
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   text-align: center;
-  width:140px;
-  font-size: 20px;
+  width:142px;
+  font-size: 18px;
   text-transform: uppercase;    
   background: white;
   display: inline-block; 
+}
+
+.li p{
+  display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
 .limg{
@@ -244,6 +248,7 @@ h1{
 .glyp{
   float: left;
   left:10%; 
+  width:30px;
 }
 
 #tester{
