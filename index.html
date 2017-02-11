@@ -11,18 +11,18 @@
     <script src="customhtmlscroll.js"></script>
   </head>
 
-  <body data-spy="scroll" data-target="#navibar" data-offset="0">
+  <body>
     <nav class="navigationbar" id="navibar"> 
       <ul class="nav navbar-nav col-md-12">
-        <li class="col-md-2 col-md-push-5"><a href="#fc">
+        <li class="col-md-2 col-md-push-5"><a href="">
           <div class="logoli" id="logo">
           </div> 
           </a> 
         </li><!--took out class="navbar-brand"-->
-        <li id="navsi" class="col-md-2 col-md-pull-2 col-md-offset-1 navitem"><a href="#aboutme" id="navsi">About Me</a></li>
-        <li id="navsi" class="col-md-2 col-md-pull-2 navitem"><a href="#aboutme">What I like</a></li>
-        <li id="navsi" class="col-md-2 navitem"><a href="#photoalb">Photos</a></li>
-        <li id="navsi" class="col-md-2 navitem"><a href="#contactme">Contact</a></li>
+        <li id="navsi" class="col-md-2 col-md-pull-2 col-md-offset-1 navitem"><a href="#aboutme" id="nli1" class="nli" title="aboutme">About Me</a></li>
+        <li id="navsi" class="col-md-2 col-md-pull-2 navitem"><a href="#tilike" id="nli2" class="nli" title="tiilike">What I like</a></li>
+        <li id="navsi" class="col-md-2 navitem"><a href="#photoalb" id="nli3" title="photoalb">Photos</a></li>
+        <li id="navsi" class="col-md-2 navitem" id="nli4" title="contactme"><a href="#contactme">Contact</a></li>
       </ul>
     </nav>
     
@@ -50,7 +50,7 @@
       <div class="backimg" id="backimg1">
       </div>
     </section>
-    <div class="container">
+    <div class="container" id="tilike">
       <div class="row"> 
         <h1 class="title col-md-10 col-md-offset-1">Things I like</h1>
       </div>
