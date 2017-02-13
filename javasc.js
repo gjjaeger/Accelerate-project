@@ -1,7 +1,7 @@
 $(document).ready(function(){
-  // $(window).on('beforeunload', function() {
-  //   $(window).scrollTop(0);
-  // });
+  $(window).on('beforeunload', function() {
+  $(window).scrollTop(0);
+  });
   var target = $(".container").offset().top;
   var interval = setInterval(function() {
     if ($(window).scrollTop() >= target) {
